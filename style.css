@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --background-color1: #fff;
+    --background-color2: rgb(48, 48, 48);
+    --box-shadow1: rgba(137, 137, 137, 0.525) 3px 3px 6px 0px inset, rgba(197, 197, 197, 0.218) -3px -3px 6px 1px inset;
+    --text-color1: black;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(232, 232, 232);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(232, 232, 232);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 80px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    background-color: var(--background-color1);
+    border: none;
+    outline: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--text-color1);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: var(--box-shadow1);
+}
+
+.input p {
+    min-width: 80%;
+}
+
+.key {
+    width: 80%;
+    height: 70%;
+    display: flex;
+}
+
+.keys {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 5px;
+}
+
+.click {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 30px;
+    border: none;
+    font-weight: bold;
+    color: var(--text-color1);
+    background-color: var(--background-color1);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: all 0.2s;
+}
+
+.click:active {
+    box-shadow: none;
+    ;
+}
+
+.zero {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.clear {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    background-color: rgb(168, 0, 0);
+    color: #fff;
+}
+
+.calculation {
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 4;
+    background: rgb(0, 101, 0);
+    color: #fff;
+}
+
+.clear-all {
+    grid-column-start: 4;
+    background-color: orangered;
+    color: #fff;
+}
+
+@media(min-width: 551px) {
+    main {
+        width: 500px;
+        height: 100vh;
+    }
+}
